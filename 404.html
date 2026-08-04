@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Redirecionando — grafo curricular</title>
+<script>
+(function () {
+  var prefixo = '/cv/';
+  var caminho = location.pathname;
+  if (caminho.indexOf(prefixo) === 0) {
+    var resto = caminho.slice(prefixo.length);
+    location.replace(prefixo + (resto ? "#" + resto : "") + location.search);
+  }
+})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ER17VRHB9Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ER17VRHB9Q');
+</script>
+</head>
+<body>
+<p>Este endereço é a URI de um registro do currículo.
+<a href="/cv/">Abrir o grafo curricular</a>.</p>
+</body>
+</html>
